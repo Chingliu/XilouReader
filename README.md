@@ -11,3 +11,8 @@ TODO
 2. 字体裁剪
 3。 pdf转ofd
 
+preview:
+![image](preview/drawparam.jpg)
+![image](preview/ticket.jpg)
+![image](preview/clips.jpg)
+
