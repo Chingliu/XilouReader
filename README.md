@@ -1,5 +1,5 @@
 # XilouReader
-专注pdf阅读，pdf处理，ofd阅读，ofd处理引擎功能开发。基于pdfium的ofd/pdf双引擎版式阅读器。
+专注pdf阅读，pdf处理，ofd阅读，ofd处理,pdf转ofd以及ofd转pdf引擎功能开发。基于pdfium的ofd/pdf双引擎版式阅读器。
 
 
 现状
