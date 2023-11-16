@@ -13,7 +13,7 @@ TODO
 
 preview:
 ![image](preview/drawparam.jpg)
-![image](preview/ticket.jpg)
+![image](preview/ticket.png)
 ![image](preview/clips.jpg)
 ![image](preview/6F575221-72B1-4e0f-8EA1-5457D8205C03.png)
 ![image](preview/signed.png)
