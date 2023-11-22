@@ -6,6 +6,8 @@
 #include <fpdfview.h>
 #include <xilou_view.h>
 #include <xilou_convert.h>
+#include <xilou_signature.h>
+#include <xilou_errcode.h>
 #include <QScrollArea>
 #include <map>
 QT_BEGIN_NAMESPACE
@@ -86,6 +88,8 @@ private slots:
     void on_actionzoomin_triggered();
 
     void on_actionToPDF_triggered();
+
+    void on_actionverify_triggered();
 
 private:
     void initView();

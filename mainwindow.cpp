@@ -230,3 +230,24 @@ void MainWindow::on_actionToPDF_triggered()
                                 tr("版式文件(*.pdf *.ofd)"));
     xilou_Convert(m_pkg->GetFilePath().toUtf8().data(), save2.toUtf8().data(), QString("*").toUtf8().data());
 }
+
+void MainWindow::on_actionverify_triggered()
+{
+    if(m_pkg && m_pkg->GetDoc()){
+        unsigned long count = xilou_docsign_count(m_pkg->GetDoc());
+        QString allmsg;
+        ;
+        QString verify_msg("");
+        while(count){
+            unsigned long vret = xilou_verify(m_pkg->GetDoc(), count -1);
+            if(vret != XILOU_E_SUC){
+                unsigned char *utf8_msg;
+                size_t len = xilou_sig_errmsg(m_pkg->GetDoc(), count -1, &utf8_msg);
+                verify_msg = QString::fromUtf8((const char *)utf8_msg, len);
+            }
+           allmsg += QString("sign[%1] verify result[%2] message[%3]\r\n\r\n").arg(count -1).arg(vret == XILOU_E_SUC ? "success":"failed").arg(verify_msg);
+            count--;
+        }
+        QMessageBox::information(NULL, "verify", allmsg);
+    }
+}

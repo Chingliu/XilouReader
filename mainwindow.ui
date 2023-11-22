@@ -47,7 +47,7 @@
          <x>0</x>
          <y>0</y>
          <width>780</width>
-         <height>544</height>
+         <height>543</height>
         </rect>
        </property>
       </widget>
@@ -87,6 +87,7 @@
    <addaction name="actionscale"/>
    <addaction name="actionzoomin"/>
    <addaction name="actionToPDF"/>
+   <addaction name="actionverify"/>
   </widget>
   <action name="actionopen">
    <property name="text">
@@ -145,6 +146,14 @@
    </property>
    <property name="toolTip">
     <string>ToPDF</string>
+   </property>
+  </action>
+  <action name="actionverify">
+   <property name="text">
+    <string>verify</string>
+   </property>
+   <property name="toolTip">
+    <string>验章</string>
    </property>
   </action>
  </widget>
