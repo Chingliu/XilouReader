@@ -18,4 +18,5 @@ preview:
 ![image](preview/6F575221-72B1-4e0f-8EA1-5457D8205C03.png)
 ![image](preview/signed.png)
 ![image](preview/verify.png)
+![image](preview/img_border.png)
 
