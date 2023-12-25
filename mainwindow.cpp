@@ -227,7 +227,7 @@ void MainWindow::on_actionToPDF_triggered()
 {
     QString save2 = QFileDialog::getSaveFileName(this, tr("Save File"),
                                 "",
-                                tr("版式文件(*.pdf *.ofd)"));
+                                tr("版式文件(*.pdf *.ofd *.txt)"));
     xilou_Convert(m_pkg->GetFilePath().toUtf8().data(), save2.toUtf8().data(), QString("*").toUtf8().data());
 }
 

@@ -142,18 +142,18 @@
   </action>
   <action name="actionToPDF">
    <property name="text">
-    <string>ToPDF</string>
+    <string>转换</string>
    </property>
    <property name="toolTip">
-    <string>ToPDF</string>
+    <string>pdf2ofd/ofd2pdf/pdf2txt/ofd2txt</string>
    </property>
   </action>
   <action name="actionverify">
    <property name="text">
-    <string>verify</string>
+    <string>验章</string>
    </property>
    <property name="toolTip">
-    <string>验章</string>
+    <string>签章验证</string>
    </property>
   </action>
  </widget>
