@@ -1,10 +1,10 @@
-/**
+ï»¿/**
  * Copyright (C) 2023 chingliu.  All rights reserved.
  *
  * @file		xilou_view.h
- * @author		ÓàÇåÁô(chingliu)
+ * @author		ä½™æ¸…ç•™(chingliu)
  * @date		2023-5-01
- * @brief		ÒıÇæ²ã´íÎóÂë¶¨Òå
+ * @brief		å¼•æ“å±‚é”™è¯¯ç å®šä¹‰
  */
 #ifndef XILOU_PUBLIC_XILOU_ERROR_CODE_HEADER_H
 #define XILOU_PUBLIC_XILOU_ERROR_CODE_HEADER_H
@@ -12,34 +12,34 @@
 
 
 /**
-* ³É¹¦
+* æˆåŠŸ
 */
 #define XILOU_E_SUC  0
 /**
- * PDF´íÎóÆğÊ¼ºÅ
+ * PDFé”™è¯¯èµ·å§‹å·
  */
 #define XILOU_E_PDF   20000
 
 /**
- * OFD´íÎóÆğÊ¼ºÅ
+ * OFDé”™è¯¯èµ·å§‹å·
  */
 #define XILOU_E_OFD 40000
 /**
- * ÎŞĞ§µÄsignature.xml
+ * æ— æ•ˆçš„signature.xml
  */
 #define XILOU_E_OFD_INVALID_SIGNATURE_XML 40001
 
 /**
- * ÎŞĞ§µÄsignature.xml
+ * æ— æ•ˆçš„signature.xml
  */
 #define XILOU_E_OFD_OES_LOADER 40002
 /**
- * ÌõÄ¿µÄhashÖµ·¢ÉúÁË±ä»¯
+ * æ¡ç›®çš„hashå€¼å‘ç”Ÿäº†å˜åŒ–
  */
 #define XILOU_E_OFD_ENTRY_HASH 40003
 
 /**
- * Ç©ÃûÖµÑéÖ¤Ê§°Ü
+ * ç­¾åå€¼éªŒè¯å¤±è´¥
  */
 #define XILOU_E_OFD_SIGNED_VERIFY_ERROR 40004
 

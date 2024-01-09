@@ -69,7 +69,7 @@ void MainWindow::initView()
     // 创建页图片
     FPDF_BITMAP pagePixmap = FPDFBitmap_Create(pageW, pageH, 1);
     FPDFBitmap_FillRect(pagePixmap, 0, 0, pageW, pageH, 0xFFFFFFFF);
-    xilou_RenderPageBitmap(pagePixmap, page, 0, 0, pageW, pageH, 0, 0x10);
+    xilou_RenderPageBitmap(pagePixmap, page, 0, 0, pageW, pageH, 0, XILOUPAGRRENDER_ANNOT | XILOUPAGRRENDER_REVERSE_BYTE_ORDER);
     // 获取Buffer
     void* bgrAbuffer = FPDFBitmap_GetBuffer(pagePixmap);
     int pixmapW = FPDFBitmap_GetWidth(pagePixmap);
