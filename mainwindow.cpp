@@ -66,6 +66,7 @@ void MainWindow::initView()
     double pageH = xilou_GetPageHeight(page);
     pageW *= m_scale;
     pageH *= m_scale;
+#if 0
     // 创建页图片
     FPDF_BITMAP pagePixmap = FPDFBitmap_Create(pageW, pageH, 1);
     FPDFBitmap_FillRect(pagePixmap, 0, 0, pageW, pageH, 0xFFFFFFFF);
@@ -79,6 +80,20 @@ void MainWindow::initView()
     ConvertBetweenBGRAandRGBA((unsigned char* )bgrAbuffer, pixmapW, pixmapH, rgbAbuffer);
     // 转换为QImage
     m_pageImg = QImage(rgbAbuffer, pixmapW, pixmapH, QImage::Format_RGB32);
+    FPDFBitmap_Destroy(pagePixmap);
+#else
+    m_pageImg =  QImage(pageW, pageH, QImage::Format_ARGB32);
+    Q_ASSERT(!m_pageImg.isNull());
+    m_pageImg.fill(0xFFFFFFFF);
+
+    FPDF_BITMAP bitmap = FPDFBitmap_CreateEx(pageW, pageH,
+                                             FPDFBitmap_BGRA,
+                                             m_pageImg.scanLine(0), m_pageImg.bytesPerLine());
+    Q_ASSERT(bitmap);
+    xilou_RenderPageBitmap(bitmap, page, 0, 0, pageW, pageH, 0, XILOUPAGRRENDER_ANNOT);
+    FPDFBitmap_Destroy(bitmap);
+    bitmap = nullptr;
+#endif
     if (pageW < ui->scrollArea->width())
     {
         ui->scrollArea->horizontalScrollBar()->setRange(0, 0);
@@ -87,7 +102,7 @@ void MainWindow::initView()
     {
         ui->scrollArea->horizontalScrollBar()->setRange(0, pageW - ui->scrollArea->width());
         ui->scrollArea->horizontalScrollBar()->setPageStep(ui->scrollArea->viewport()->width());
-        ui->scrollArea->horizontalScrollBar()->setSingleStep(pixmapW / 10);
+        ui->scrollArea->horizontalScrollBar()->setSingleStep(pageW / 10);
     }
 
     if (pageH < ui->scrollArea->height())
