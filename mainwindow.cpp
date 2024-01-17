@@ -249,11 +249,19 @@ void MainWindow::on_actionToPDF_triggered()
 void MainWindow::on_actionverify_triggered()
 {
     if(m_pkg && m_pkg->GetDoc()){
-        unsigned long count = xilou_docsign_count(m_pkg->GetDoc());
+        long count = xilou_docsign_count(m_pkg->GetDoc());
         QString allmsg;
         ;
         QString verify_msg("");
-        while(count){
+        if(count <0){
+            QMessageBox::information(NULL, "verify", "error! not support");
+            return;
+        }
+        if(count ==0){
+            QMessageBox::information(NULL, "verify", "no signature!");
+            return;
+        }
+        while(count >0){
             unsigned long vret = xilou_verify(m_pkg->GetDoc(), count -1);
             if(vret != XILOU_E_SUC){
                 unsigned char *utf8_msg;
