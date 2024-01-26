@@ -6,6 +6,8 @@
  * @date		2023-11-22
  * @brief		PDF/OFD签名验签接口
  */
+#ifndef XILOU_PUBLIC_XILOU_SIGNATURE_H_
+#define XILOU_PUBLIC_XILOU_SIGNATURE_H_
 
 #include "xilou_view.h"
 
@@ -35,4 +37,6 @@ XILOU_EXPORT size_t XILOU_CALLCONV xilou_sig_errmsg(XILOU_DOCUMENT document,
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif

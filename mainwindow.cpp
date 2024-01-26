@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->verticalLayout->removeWidget(ui->scrollArea);
     ui->scrollArea = new CScrollArea(ui->centralwidget);
     ui->verticalLayout->addWidget(ui->scrollArea);
+    xiloug_setloglevel(0);
     xilou_InitLibrary();
     m_pkg = NULL;
 }

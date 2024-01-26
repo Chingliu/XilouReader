@@ -8,6 +8,7 @@
 #include <xilou_convert.h>
 #include <xilou_signature.h>
 #include <xilou_errcode.h>
+#include <xilou_logger.h>
 #include <QScrollArea>
 #include <map>
 QT_BEGIN_NAMESPACE

@@ -6,6 +6,8 @@
  * @date		2023-5-01
  * @brief		PDF/OFD互转接口
  */
+#ifndef XILOU_PUBLIC_XILOU_CONVERT_H_
+#define XILOU_PUBLIC_XILOU_CONVERT_H_
 
 #include "xilou_view.h"
 
@@ -22,4 +24,6 @@ xilou_Convert(XILOU_UTF8STRING src_fpath,
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif
