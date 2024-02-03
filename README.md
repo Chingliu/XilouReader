@@ -8,7 +8,12 @@
 
 history:
 2023-12-25:实现PDF转.txt文件功能
+2024-02-03：简单pdf转ofd
 
+目录说明：
+out/release目录下是windows下的预编译版本，只测试了windows11(windows10应该也可以)
+ofdcases目录用于上传ofd用例文档， 有任何渲染有问题的文档，欢迎 pull request
+convertcases目录用于上传pfd转ofd, ofd转pdf用例文档， 有任何有问题文档，欢迎 pull request
 TODO
 1. 签章解析（ofd已支持签章解析及验章）
 2. 字体裁剪
