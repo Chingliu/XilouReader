@@ -12,12 +12,15 @@ history:
 目录说明：  
 out/release目录下是windows下的预编译版本，只测试了windows11(windows10应该也可以)  
 ofdcases目录用于上传ofd用例文档， 有任何渲染有问题的文档，欢迎 pull request  
-convertcases目录用于上传pfd转ofd, ofd转pdf用例文档， 有任何有问题文档，欢迎 pull request  
+convertcases目录用于上传pfd转ofd, ofd转pdf用例文档， 有任何有问题文档，欢迎 pull request   
+OfficeMaster_document_convert_system 目录放置的是OfficeMaster多格式文档转换系统的授权文件  
+详见https://github.com/Chingliu/OfficeMaster_document_convert_system 或  
+https://gitee.com/chingliu/OfficeMaster_document_convert_system  
 
 TODO  
 1. 签章解析（ofd已支持签章解析及验章）  
 2. 字体裁剪  
-3。 pdf转ofd  
+3. pdf转ofd  
 
 preview:
 ![image](preview/drawparam.jpg)
