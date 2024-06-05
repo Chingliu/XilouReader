@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QPainter>
 #include <QScrollBar>
+#include "img2pdf.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -274,4 +275,10 @@ void MainWindow::on_actionverify_triggered()
         }
         QMessageBox::information(NULL, "verify", allmsg);
     }
+}
+
+void MainWindow::on_actionImg2PDF_triggered()
+{
+    img2pdf dlg;
+    dlg.exec();
 }

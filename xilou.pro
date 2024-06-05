@@ -10,13 +10,17 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    img2pdf.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    img2pdf.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    img2pdf.ui \
+    img2pdf.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

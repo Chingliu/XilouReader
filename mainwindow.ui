@@ -88,6 +88,7 @@
    <addaction name="actionzoomin"/>
    <addaction name="actionToPDF"/>
    <addaction name="actionverify"/>
+   <addaction name="actionImg2PDF"/>
   </widget>
   <action name="actionopen">
    <property name="text">
@@ -154,6 +155,14 @@
    </property>
    <property name="toolTip">
     <string>签章验证</string>
+   </property>
+  </action>
+  <action name="actionImg2PDF">
+   <property name="text">
+    <string>图片转版式</string>
+   </property>
+   <property name="toolTip">
+    <string>png2pdf,png2ofd</string>
    </property>
   </action>
  </widget>

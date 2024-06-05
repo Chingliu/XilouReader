@@ -92,6 +92,8 @@ private slots:
 
     void on_actionverify_triggered();
 
+    void on_actionImg2PDF_triggered();
+
 private:
     void initView();
     void ConvertBetweenBGRAandRGBA(unsigned char *input, int pixel_width, int pixel_height, unsigned char *output);

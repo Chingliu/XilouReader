@@ -15,6 +15,42 @@
 * 成功
 */
 #define XILOU_E_SUC  0
+
+/**
+ * 未实现功能
+ */
+#define XILOU_E_NOTIMPLEMENT 1
+
+/**
+ * 图像解析错误
+ */
+#define XILOU_E_LOADIMAGE 10000
+
+/**
+ * 错误的文档句柄类型
+ */
+#define XILOU_E_FILEHANDLETYPE 10001
+
+/**
+ * 生成新对象错误
+ */
+#define XILOU_E_NEWPAGEOBJECT 10002
+
+/**
+ * 设置BITMAP错误
+ */
+#define XILOU_E_SETBITMAP 10003
+
+/**
+ * 构建新页面错误
+ */
+#define XILOU_E_NEWPAGE 10004
+
+/**
+ * 无效的参数
+ */
+#define XILOU_E_INVALIDPARAMETER 10005
+
 /**
  * PDF错误起始号
  */
