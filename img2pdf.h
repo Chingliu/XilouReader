@@ -20,9 +20,12 @@ private slots:
 
     void on_save2Btn_clicked();
 
+    void on_selectTextBtn_clicked();
+
 private:
     Ui::img2pdf *ui;
     QString m_imgpath;
+    QString m_txtpath;
 };
 
 #endif // IMG2PDF_H

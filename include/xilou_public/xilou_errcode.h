@@ -52,9 +52,28 @@
 #define XILOU_E_INVALIDPARAMETER 10005
 
 /**
+ * 页码错误
+ */
+#define XILOU_E_INVALIDPAGEINDEX 10006
+
+/**
+ * 附加文字的json格式错误
+ */
+#define XILOU_E_INVALIDTEXTJSON 10007
+
+/**
+ * LoadPage错误
+ */
+#define XILOU_E_LOADPAGE 10008
+/**
  * PDF错误起始号
  */
 #define XILOU_E_PDF   20000
+
+/**
+ * PDF转OFD错误
+ */
+#define XILOU_E_PDF2OFD 20001
 
 /**
  * OFD错误起始号

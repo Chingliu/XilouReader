@@ -4,6 +4,8 @@
 #include <QFileInfo>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QFile>
+#include <QByteArray>
 img2pdf::img2pdf(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::img2pdf)
@@ -45,6 +47,21 @@ void img2pdf::on_save2Btn_clicked()
             QMessageBox::warning(this, "Error", msg);
             return;
         }
+        if(!m_txtpath.isEmpty()){
+            QFile jsonFile(m_txtpath);
+            if(jsonFile.open(QIODevice::ReadOnly|QIODevice::Text)){
+                QByteArray  ba = jsonFile.readAll();
+                iret = xilou_AddTextOnPage(pkg, 0, ba.data());
+                if(iret != 0){
+                    QString msg=QString(tr("插入文字错误： %1")).arg(iret);
+                    QMessageBox::warning(this, "Error", msg);
+                }
+            }else{
+                QString msg=QString(tr("读取文件错误： %1")).arg(m_txtpath);
+                QMessageBox::warning(this, "Error", msg);
+            }
+
+        }
         iret = xilou_Save2File(&pkg, save2.toUtf8().data());
         if(pkg){
             xilou_ClosePackage(pkg);
@@ -58,4 +75,14 @@ void img2pdf::on_save2Btn_clicked()
         QMessageBox::warning(this, "Suc", tr("转换成功"));
     }
 
+}
+
+void img2pdf::on_selectTextBtn_clicked()
+{
+    m_txtpath = QFileDialog::getOpenFileName(this, tr("打开"), tr(""), tr("文本文件(*.json)"));
+    if (m_txtpath.isEmpty())
+    {
+        return;
+    }
+    ui->textpathEdit->setText(m_txtpath);
 }
