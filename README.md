@@ -6,6 +6,7 @@
 2。OFD常规文档，发票，公文的阅读及签章验证通常不会有问题，有问题请报issue附上文档  
 
 history:
+2024-06-10：实现了图像转pdf/ofd, 双层pdf/ofd，见convertcases下的test.png/test.png.json/img2ofd.ofd/img2pdf.pdf  
 2023-12-25:实现PDF转.txt文件功能  
 2024-02-03：简单pdf转ofd  
 
