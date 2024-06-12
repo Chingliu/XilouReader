@@ -94,6 +94,8 @@ private slots:
 
     void on_actionImg2PDF_triggered();
 
+    void on_mergeofd_triggered();
+
 private:
     void initView();
     void ConvertBetweenBGRAandRGBA(unsigned char *input, int pixel_width, int pixel_height, unsigned char *output);

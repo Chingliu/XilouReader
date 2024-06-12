@@ -11,16 +11,19 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    img2pdf.cpp
+    img2pdf.cpp \
+    ofdmerge.cpp
 
 HEADERS += \
     mainwindow.h \
-    img2pdf.h
+    img2pdf.h \
+    ofdmerge.h
 
 FORMS += \
     mainwindow.ui \
     img2pdf.ui \
-    img2pdf.ui
+    img2pdf.ui \
+    ofdmerge.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

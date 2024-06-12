@@ -5,7 +5,7 @@
 #include <QPainter>
 #include <QScrollBar>
 #include "img2pdf.h"
-
+#include "ofdmerge.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow), pageIndex(0), m_scale(1.0f)
@@ -280,5 +280,11 @@ void MainWindow::on_actionverify_triggered()
 void MainWindow::on_actionImg2PDF_triggered()
 {
     img2pdf dlg;
+    dlg.exec();
+}
+
+void MainWindow::on_mergeofd_triggered()
+{
+    ofdmerge dlg;
     dlg.exec();
 }

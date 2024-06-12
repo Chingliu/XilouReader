@@ -20,7 +20,7 @@ img2pdf::~img2pdf()
 
 void img2pdf::on_selectImgBtn_clicked()
 {
-    m_imgpath = QFileDialog::getOpenFileName(this, tr("打开"), tr(""), tr("版式文件(*.png *.jpg)"));
+    m_imgpath = QFileDialog::getOpenFileName(this, tr("打开"), tr(""), tr("图像文件(*.png *.jpg)"));
     if (m_imgpath.isEmpty())
     {
         return;

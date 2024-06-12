@@ -95,6 +95,7 @@
    <addaction name="actionToPDF"/>
    <addaction name="actionverify"/>
    <addaction name="actionImg2PDF"/>
+   <addaction name="mergeofd"/>
   </widget>
   <action name="actionopen">
    <property name="text">
@@ -169,6 +170,11 @@
    </property>
    <property name="toolTip">
     <string>png2pdf,png2ofd</string>
+   </property>
+  </action>
+  <action name="mergeofd">
+   <property name="text">
+    <string>ofd合并</string>
    </property>
   </action>
  </widget>

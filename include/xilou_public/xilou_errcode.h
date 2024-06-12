@@ -65,6 +65,15 @@
  * LoadPage错误
  */
 #define XILOU_E_LOADPAGE 10008
+
+/**
+ * 读取字体文件失败
+ */
+#define XILOU_E_READFONTFILE 10009
+/**
+ * 加载字体资源失败
+ */
+#define XILOU_E_LOADFONTDATA 10010
 /**
  * PDF错误起始号
  */
@@ -112,5 +121,10 @@
  * out of range
  */
 #define XILOU_E_OUT_OF_RANGE_ERROR 40007
+
+/**
+ * 打开zip失败
+ */
+#define XILOU_E_FAILEDOPENZIP 40008
 
 #endif

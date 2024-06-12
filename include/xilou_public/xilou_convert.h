@@ -68,6 +68,9 @@ XILOU_EXPORT int XILOU_CALLCONV xilou_AddTextOnPage(XILOU_PACKAGE pkg,
                                                     XILOU_UTF8STRING txt_json);
 
 
+XILOU_EXPORT int XILOU_CALLCONV
+xilou_OfdMerge(XILOU_UTF8STRING merge2ofd_path,
+               XILOU_UTF8STRING been_merged_ofd_path);
 #ifdef __cplusplus
 }
 #endif
