@@ -21,7 +21,7 @@ OfficeMaster_document_convert_system 目录放置的是OfficeMaster多格式文�
 https://gitee.com/chingliu/OfficeMaster_document_convert_system  
 
 TODO  
-1. 签章解析（ofd已支持签章解析及验章）  
+1. 签章解析（ofd已支持签章解析及验章） 验章逻辑在https://github.com/Chingliu/gm_0031_38540_verifier  
 2. 字体裁剪  
 3. pdf转ofd  
 
