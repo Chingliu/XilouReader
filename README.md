@@ -1,6 +1,7 @@
 # XilouReader  
 专注pdf阅读，pdf处理，ofd阅读，ofd处理,pdf转ofd以及ofd转pdf引擎功能开发。基于pdfium的ofd/pdf双引擎版式阅读器。  
 
+引擎代码地址：https://github.com/Chingliu/xilou_core  
 现状  
 1。PDF阅读  
 2。OFD常规文档，发票，公文的阅读及签章验证通常不会有问题，有问题请报issue附上文档  
